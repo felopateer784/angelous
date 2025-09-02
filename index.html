@@ -1,951 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ملخص كامل لملف Phy101.pdf - 140 صفحة مضغوطة إلى 40</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
-        
-        :root {
-            --primary-color: #667eea;
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-color: #f093fb;
-            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --accent-color: #4facfe;
-            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --dark-color: #2d3748;
-            --light-color: #f7fafc;
-            --success-color: #48bb78;
-            --warning-color: #ed8936;
-            --text-primary: #2d3748;
-            --text-secondary: #4a5568;
-            --glass-bg: rgba(255, 255, 255, 0.15);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
-            --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.5);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            color: var(--text-primary);
-            line-height: 1.7;
-            direction: rtl;
-            text-align: right;
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
-            z-index: -1;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .header {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-light);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        .header h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 15px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 2;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 300;
-            position: relative;
-            z-index: 2;
-        }
-
-        .nav-container {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-light);
-            transition: all 0.3s ease;
-        }
-
-        .nav-container:hover {
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-5px);
-        }
-
-        .nav-container h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-            list-style: none;
-        }
-
-        .nav-item {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-
-        .nav-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav-item a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 15px 20px;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-
-        .nav-item a:hover {
-            color: var(--accent-color);
-        }
-
-        .section {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-light);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--primary-gradient);
-            border-radius: 20px 20px 0 0;
-        }
-
-        .section:hover {
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-3px);
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--accent-gradient);
-            border-radius: 2px;
-        }
-
-        .section h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.95);
-            margin: 25px 0 15px 0;
-            position: relative;
-            padding-right: 20px;
-        }
-
-        .section h3::before {
-            content: '●';
-            position: absolute;
-            right: 0;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-
-        .section p, .section li {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .section ul {
-            margin-right: 30px;
-            margin-bottom: 20px;
-        }
-
-        .section ul li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-right: 20px;
-        }
-
-        .section ul li::before {
-            content: '▶';
-            position: absolute;
-            right: 0;
-            color: var(--accent-color);
-            font-size: 0.8rem;
-        }
-
-        .equation {
-            background: linear-gradient(135deg, rgba(79, 172, 254, 0.2) 0%, rgba(0, 242, 254, 0.2) 100%);
-            border: 1px solid rgba(79, 172, 254, 0.4);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .equation::before {
-            content: '⚡';
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            font-size: 1.5rem;
-            opacity: 0.5;
-        }
-
-        .example {
-            background: linear-gradient(135deg, rgba(240, 147, 251, 0.15) 0%, rgba(245, 87, 108, 0.15) 100%);
-            border: 1px solid rgba(240, 147, 251, 0.3);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px 0;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .example::before {
-            content: '💡';
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            font-size: 1.3rem;
-        }
-
-        .example:hover {
-            background: linear-gradient(135deg, rgba(240, 147, 251, 0.25) 0%, rgba(245, 87, 108, 0.25) 100%);
-            transform: translateY(-2px);
-        }
-
-        .example p {
-            margin-right: 30px;
-            font-size: 1.05rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: center;
-            font-size: 1.1rem;
-        }
-
-        th {
-            background: var(--primary-gradient);
-            color: white;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        td {
-            color: rgba(255, 255, 255, 0.9);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        tr:hover td {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .part-header {
-            background: var(--secondary-gradient);
-            color: white;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow-light);
-        }
-
-        .footer {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 40px;
-            box-shadow: var(--shadow-light);
-        }
-
-        .footer p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1rem;
-        }
-
-        /* Animations */
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .header p {
-                font-size: 1rem;
-            }
-
-            .section {
-                padding: 25px;
-            }
-
-            .section h2 {
-                font-size: 1.6rem;
-            }
-
-            .nav-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-gradient);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-gradient);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-        </header>
-
-        <nav class="nav-container">
-            <h2>📚 جدول المحتويات</h2>
-            <ul class="nav-grid">
-                <li class="nav-item"><a href="#part1">🔥 الجزء 1: الحرارة</a></li>
-                <li class="nav-item"><a href="#ch1">🌡️ الطاقة الحرارية ودرجة الحرارة</a></li>
-                <li class="nav-item"><a href="#ch2">⚡ السعة الحرارية والحرارة الكامنة</a></li>
-                <li class="nav-item"><a href="#ch3">📏 التمدد الحراري</a></li>
-                <li class="nav-item"><a href="#ch4">🔄 نقل الحرارة</a></li>
-                <li class="nav-item"><a href="#ch5">⚛️ نظرية الحركة الجزيئية للغازات</a></li>
-                <li class="nav-item"><a href="#ch6">🔧 النظام الديناميكي الحراري</a></li>
-                <li class="nav-item"><a href="#ch7">⚖️ القانون الثاني للديناميكا الحرارية</a></li>
-                <li class="nav-item"><a href="#part2">🧪 الجزء 2: خصائص المادة</a></li>
-                <li class="nav-item"><a href="#part2ch1">📐 القياسات الفيزيائية والوحدات</a></li>
-                <li class="nav-item"><a href="#part2ch2">🌍 الجاذبية</a></li>
-                <li class="nav-item"><a href="#part2ch3">💧 تدفق السوائل</a></li>
-                <li class="nav-item"><a href="#part2ch4">🏗️ المرونة</a></li>
-                <li class="nav-item"><a href="#part2ch5">🔄 دوران جسم صلب</a></li>
-                <li class="nav-item"><a href="#part2ch6">🌊 الحركة التوافقية البسيطة</a></li>
-            </ul>
-        </nav>
-
-        <section id="part1" class="section">
-            <div class="part-header">الجزء 1: الحرارة</div>
-            <p>يغطي هذا الجزء مواضيع الحرارة من درجة الحرارة إلى قوانين الديناميكا الحرارية، ويشمل دراسة انتقال الطاقة الحرارية وخصائصها المختلفة.</p>
-        </section>
-
-        <section id="ch1" class="section">
-            <h2>الفصل 1: الطاقة الحرارية ودرجة الحرارة (ص 9-16)</h2>
-            <p>الحرارة هي طاقة، ودرجة الحرارة تقيس متوسط الطاقة الحركية للجزيئات. مصادر الطاقة الحرارية تشمل: الطاقة الميكانيكية، الكهربائية، الكيميائية، النووية، والشمسية.</p>
-            
-            <h3>مقاييس الحرارة</h3>
-            <ul>
-                <li><strong>سيلزيوس (°C):</strong> تجميد الماء عند 0°C، غليان الماء عند 100°C</li>
-                <li><strong>فهرنهايت (°F):</strong> °C = (5/9)(°F - 32)</li>
-                <li><strong>كلفن (K):</strong> K = °C + 273، الصفر المطلق عند -273°C</li>
-            </ul>
-            
-            <div class="equation">الصفر المطلق: توقف كامل للحركة الجزيئية عند -273.15°C</div>
-            
-            <div class="example">
-                <p><strong>مثال 1:</strong> تحويل 78°F إلى °C = 25.56°C</p>
-                <p><strong>مثال 2:</strong> تحويل 20°C إلى K = 293 K</p>
-                <p><strong>تمارين:</strong> تحويل 44°F و-15°F إلى °C، 200°C و-200°C إلى K، 82°F إلى K</p>
-                <p><strong>مسألة:</strong> تغير درجة حرارة معدن من 30°C إلى 90°C = 60°C أو 60K</p>
-            </div>
-        </section>
-
-        <section id="ch2" class="section">
-            <h2>الفصل 2: السعة الحرارية النوعية والحرارة الكامنة (ص 17-26)</h2>
-            <p>السعة الحرارية النوعية (c) هي كمية الطاقة المطلوبة لرفع درجة حرارة 1 كيلوجرام من المادة بمقدار 1 كلفن.</p>
-            
-            <h3>قيم السعة الحرارية النوعية</h3>
-            <ul>
-                <li>الماء: 4200 J/kg·K</li>
-                <li>الجليد: 2100 J/kg·K</li>
-                <li>الزجاج: 840 J/kg·K</li>
-                <li>الحديد: 460 J/kg·K</li>
-                <li>الألمنيوم: 900 J/kg·K</li>
-            </ul>
-            
-            <div class="equation">Q = m c ΔT</div>
-            
-            <h3>الحرارة الكامنة</h3>
-            <p>تغيير حالة المادة دون تغيير درجة الحرارة. حرارة الانصهار للماء LF = 3.3×10⁵ J/kg، حرارة التبخر LV = 2.25×10⁶ J/kg.</p>
-            
-            <div class="equation">Q = m L</div>
-            
-            <div class="example">
-                <p><strong>مثال 1:</strong> رفع 4kg ماء من 20°C إلى 100°C: Q = 1.344×10⁶ J</p>
-                <p><strong>مثال 2:</strong> 6.7kJ إلى 0.1kg زجاج من 20°C: T نهائية = 120°C = 393K</p>
-                <p><strong>مثال 3:</strong> 40kg حديد مع 10kg ماء من 15°C إلى 75°C: Q = 3.624×10⁶ J</p>
-                <p><strong>مثال 4:</strong> إذابة 3kg جليد من -20°C إلى بخار 140°C: Q = 9.294×10⁶ J</p>
-            </div>
-        </section>
-
-        <section id="ch3" class="section">
-            <h2>الفصل 3: التمدد الحراري (ص 27-39)</h2>
-            <p>التمدد الحراري يحدث بسبب زيادة اهتزاز الذرات عند ارتفاع درجة الحرارة. الاستثناء: الماء يتمدد بين 4°C و0°C.</p>
-            
-            <h3>التمدد الخطي</h3>
-            <div class="equation">ΔL = L₀ α ΔT</div>
-            <p>حيث α هو معامل التمدد الخطي</p>
-            
-            <h3>التطبيقات</h3>
-            <ul>
-                <li>فواصل التمدد في الطرق والجسور</li>
-                <li>شرائط ثنائية المعدن في الترموستات</li>
-                <li>تصميم المسامير والوصلات</li>
-            </ul>
-            
-            <h3>التمدد السطحي والحجمي</h3>
-            <div class="equation">ΔA = A₀ β ΔT (β = 2α)</div>
-            <div class="equation">ΔV = V₀ γ ΔT (γ = 3α)</div>
-            
-            <div class="example">
-                <p><strong>مثال 1:</strong> سكة حديد طولها 100km، ΔT = 30K: التمدد ΔL = 36m</p>
-                <p><strong>مثال 2:</strong> برميل 60L بنزين من 0°C إلى 35°C: فيضان 1.995L</p>
-                <p><strong>مثال 3:</strong> حلقة حديد قطرها 3.453cm لتناسب مكبس قطره 3.458cm: T = 137.6°C</p>
-            </div>
-        </section>
-
-        <section id="ch4" class="section">
-            <h2>الفصل 4: نقل الحرارة (ص 40-49)</h2>
-            <p>الحرارة تنتقل بثلاث طرق رئيسية: التوصيل، الحمل، والإشعاع.</p>
-            
-            <h3>التوصيل الحراري</h3>
-            <p>نقل الطاقة عبر الجزيئات دون حركة كتلية. قانون فورييه:</p>
-            <div class="equation">dQ/dt = -k A (dT/dx)</div>
-            
-            <table>
-                <tr><th>المادة</th><th>معامل التوصيل k (W m⁻¹ K⁻¹)</th></tr>
-                <tr><td>نحاس</td><td>390</td></tr>
-                <tr><td>حديد</td><td>46</td></tr>
-                <tr><td>خرسانة</td><td>1.3</td></tr>
-                <tr><td>زجاج</td><td>0.84</td></tr>
-                <tr><td>ماء</td><td>0.57</td></tr>
-                <tr><td>هواء</td><td>0.024</td></tr>
-            </table>
-            
-            <h3>الحمل الحراري</h3>
-            <p>انتقال الحرارة عبر حركة السوائل بسبب فرق الكثافة.</p>
-            <div class="equation">dQ/dt = -hc A dT</div>
-            
-            <h3>الإشعاع الحراري</h3>
-            <p>انتقال الحرارة عبر الموجات الكهرومغناطيسية. قانون ستيفان-بولتزمان:</p>
-            <div class="equation">e = ε σ T⁴ (σ = 5.67×10⁻⁸ W m⁻² K⁻⁴)</div>
-            
-            <div class="example">
-                <p><strong>مثال 1:</strong> شريط نحاس 60cm قطر 20mm، نهاية 100°C، أخرى 0°C: تدفق حرارة 251.2 W</p>
-                <p><strong>مثال 2:</strong> مشعاع 1.8m²، 60°C: القدرة المشعة Q/t = 1254 W</p>
-            </div>
-        </section>
-
-        <section id="ch5" class="section">
-            <h2>الفصل 5: نظرية الحركة الجزيئية للغازات (ص 50-56)</h2>
-            <p>نظرية تفسر سلوك الغازات بناءً على حركة الجزيئات.</p>
-            
-            <h3>الافتراضات الأساسية</h3>
-            <ul>
-                <li>الغاز يحتوي على عدد كبير من الجزيئات</li>
-                <li>الجزيئات تتصادم تصادمات مرنة</li>
-                <li>لا توجد قوى بين الجزيئات</li>
-                <li>الطاقة الحركية تتناسب مع درجة الحرارة المطلقة</li>
-            </ul>
-            
-            <h3>قوانين الغازات</h3>
-            <div class="equation">قانون بويل: PV = const (عند T ثابت)</div>
-            <div class="equation">قانون شارل: V ∝ T (عند P ثابت)</div>
-            <div class="equation">قانون غاي-لوساك: P ∝ T (عند V ثابت)</div>
-            <div class="equation">المعادلة العامة: PV = nRT (R = 8.314 J/mol·K)</div>
-            
-            <h3>ضغط الغاز</h3>
-            <div class="equation">P = (1/3) ρ v²</div>
-            <p>حيث ρ هي الكثافة و v هي السرعة الجذرية المتوسطة</p>
-            
-            <div class="example">
-                <p><strong>مثال 1:</strong> غاز حجمه 0.105m³ عند 20°C وضغط 1.5 atm، إذا ضُغط إلى 0.04m³ وضغط 7.5 atm: T = 558K = 285°C</p>
-                <p><strong>مثال 2:</strong> غاز عند 333K وضغط 20 atm، حجمه 0.06m³، إذا تمدد إلى 0.54m³ عند 30°C: P = 1.67 atm</p>
-            </div>
-        </section>
-
-        <section id="ch6" class="section">
-            <h2>الفصل 6: النظام الديناميكي الحراري (ص 57-79)</h2>
-            <p>دراسة تحولات الطاقة في الأنظمة الحرارية وعلاقتها بالعمل المبذول.</p>
-            
-            <h3>القوانين الأساسية</h3>
-            <p><strong>القانون الصفري:</strong> التوازن الحراري بين الأنظمة</p>
-            <p><strong>القانون الأول:</strong> حفظ الطاقة في الأنظمة الحرارية</p>
-            <div class="equation">dH = dE + dw/J</div>
-            <p>حيث J هو المعادل الميكانيكي للحرارة</p>
-            
-            <h3>السعات الحرارية</h3>
-            <ul>
-                <li><strong>Cv:</strong> السعة الحرارية عند حجم ثابت</li>
-                <li><strong>Cp:</strong> السعة الحرارية عند ضغط ثابت</li>
-            </ul>
-            <div class="equation">Cp - Cv = R/J</div>
-            <div class="equation">γ = Cp/Cv = 1 + R/(J Cv)</div>
-            
-            <h3>العمليات الحرارية</h3>
-            <ul>
-                <li><strong>أدياباتية:</strong> dH = 0 (لا تبادل حراري)</li>
-                <li><strong>أيزوكورية:</strong> dw = 0 (حجم ثابت)</li>
-                <li><strong>أيزوثرمالية:</strong> dE = 0 (درجة حرارة ثابتة)</li>
-                <li><strong>أيزوبارية:</strong> ضغط ثابت</li>
-            </ul>
-            
-            <h3>معادلات العمليات</h3>
-            <div class="equation">العملية الأيزوثرمالية: w = mRT ln(V₂/V₁)</div>
-            <div class="equation">العملية الأدياباتية: TV^(γ-1) = const, PV^γ = const</div>
-            
-            <div class="example">
-                <p><strong>مثال 1:</strong> هواء حجمه 0.4m³ وضغط 5 atm يتمدد إلى ضغط 1 atm عند درجة حرارة ثابتة: العمل = 3.21×10⁴ kg.m</p>
-                <p><strong>مثال 2:</strong> غاز كتلته 1kg عند 40°C، ضغطه من 1.5 إلى 6 atm عند درجة حرارة ثابتة: H = -1.3×10⁴ kg.m (خسارة حرارة)</p>
-                <p><strong>مثال 3:</strong> غاز حجمه 0.3m³ وضغط 2 atm عند 77°C، ضغطه إلى 7 atm عند حجم ثابت: T₂ = 1225K</p>
-            </div>
-        </section>
-
-        <section id="ch7" class="section">
-            <h2>الفصل 7: القانون الثاني للديناميكا الحرارية (ص 80-94)</h2>
-            <p>يحدد اتجاه العمليات الحرارية الطبيعية ومفهوم الكفاءة في الآلات الحرارية.</p>
-            
-            <h3>صياغات القانون الثاني</h3>
-            <ul>
-                <li><strong>قانون كلازيوس:</strong> لا يمكن نقل الحرارة من جسم بارد إلى ساخن دون عمل خارجي</li>
-                <li><strong>قانون كلفن-بلانك:</strong> لا يمكن تحويل الحرارة كاملة إلى عمل في دورة واحدة</li>
-            </ul>
-            
-            <h3>الآلة الحرارية</h3>
-            <p>نظام يحول الطاقة الحرارية إلى عمل ميكانيكي من خلال دورة حرارية.</p>
-            
-            <h3>دورة كارنو</h3>
-            <p>دورة مثالية تتكون من عمليتين أيزوثرماليتين وعمليتين أدياباتيتين.</p>
-            <div class="equation">كفاءة كارنو: η = 1 - T₂/T₁</div>
-            
-            <h3>الإنتروبيا (S)</h3>
-            <p>مقياس عشوائية النظام. القانون الثالث: S = 0 عند 0K.</p>
-            <div class="equation">dS = dH/T</div>
-            <div class="equation">S = Cv ln T + R ln V + const</div>
-            
-            <div class="example">
-                <p><strong>مثال 1:</strong> آلة كارنو تعمل بين 127°C و27°C: الكفاءة η = 25%</p>
-                <p><strong>مثال 2:</strong> مبرد كارنو عند 400K يمتص 200 kcal ويطرد 150 kcal: T₂ = 300K، η = 25%</p>
-                <p><strong>مثال 3:</strong> لزيادة كفاءة آلة كارنو من 50% إلى 70% عند 7°C: يجب زيادة درجة الحرارة العليا بـ 373K</p>
-            </div>
-        </section>
-
-        <section id="part2" class="section">
-            <div class="part-header">الجزء 2: خصائص المادة</div>
-            <p>يغطي هذا الجزء الخصائص الفيزيائية للمواد بما في ذلك الوحدات، الجاذبية، ديناميكا السوائل، المرونة، والحركة الدورانية.</p>
-        </section>
-
-        <section id="part2ch1" class="section">
-            <h2>الفصل 1: القياسات الفيزيائية والوحدات (ص 95-101)</h2>
-            <p>أساسيات القياس والوحدات المستخدمة في الفيزياء.</p>
-            
-            <h3>أنظمة الوحدات</h3>
-            <ul>
-                <li><strong>النظام الدولي (SI):</strong> متر، كيلوجرام، ثانية، كلفن، أمبير، كانديلا، مول</li>
-                <li><strong>نظام CGS:</strong> سنتيمتر، جرام، ثانية</li>
-                <li><strong>النظام الإنجليزي:</strong> قدم، رطل، ثانية</li>
-            </ul>
-            
-            <h3>الوحدات الأساسية في النظام الدولي</h3>
-            <table>
-                <tr><th>الكمية</th><th>الوحدة</th><th>التعريف</th></tr>
-                <tr><td>الطول</td><td>متر (m)</td><td>مسافة ينقطعها الضوء في 1/299,792,458 ثانية</td></tr>
-                <tr><td>الكتلة</td><td>كيلوجرام (kg)</td><td>كتلة سبيكة البلاتين-الإيريديوم المعيارية</td></tr>
-                <tr><td>الزمن</td><td>ثانية (s)</td><td>9,192,631,770 دورة إشعاع السيزيوم-133</td></tr>
-                <tr><td>درجة الحرارة</td><td>كلفن (K)</td><td>1/273.16 من النقطة الثلاثية للماء</td></tr>
-            </table>
-            
-            <h3>المضاعفات والكسور</h3>
-            <table>
-                <tr><th>القوة</th><th>الرمز</th><th>الاسم</th></tr>
-                <tr><td>10¹⁵</td><td>P</td><td>بيتا</td></tr>
-                <tr><td>10¹²</td><td>T</td><td>تيرا</td></tr>
-                <tr><td>10⁹</td><td>G</td><td>جيجا</td></tr>
-                <tr><td>10⁶</td><td>M</td><td>ميجا</td></tr>
-                <tr><td>10³</td><td>k</td><td>كيلو</td></tr>
-                <tr><td>10⁻³</td><td>m</td><td>ميلي</td></tr>
-                <tr><td>10⁻⁶</td><td>μ</td><td>ميكرو</td></tr>
-                <tr><td>10⁻⁹</td><td>n</td><td>نانو</td></tr>
-            </table>
-            
-            <h3>تحليل الأبعاد</h3>
-            <p>أداة للتحقق من صحة المعادلات الفيزيائية.</p>
-            <div class="equation">[السرعة] = L/T، [التسارع] = L/T²، [القوة] = ML/T²</div>
-            
-            <div class="example">
-                <p><strong>مثال:</strong> التحقق من معادلة x = ½at²</p>
-                <p>[x] = L، [½at²] = (L/T²)(T²) = L ✓</p>
-            </div>
-        </section>
-
-        <section id="part2ch2" class="section">
-            <h2>الفصل 2: الجاذبية (ص 102-107)</h2>
-            <p>دراسة قوى الجاذبية وتأثيرها على حركة الأجسام السماوية.</p>
-            
-            <h3>قانون الجاذبية العام</h3>
-            <div class="equation">Fg = G m₁m₂/r²</div>
-            <p>حيث G = 6.67×10⁻¹¹ N⋅m²/kg² (ثابت الجاذبية العام)</p>
-            
-            <h3>التسارع الأرضي</h3>
-            <div class="equation">g = GME/RE²</div>
-            
-            <h3>قوانين كبلر</h3>
-            <ol>
-                <li><strong>القانون الأول:</strong> الكواكب تتحرك في مدارات إهليلجية والشمس في إحدى البؤرتين</li>
-                <li><strong>القانون الثاني:</strong> الخط الواصل بين الكوكب والشمس يمسح مساحات متساوية في أزمنة متساوية</li>
-                <li><strong>القانون الثالث:</strong> T² ∝ a³ (حيث T الدورة و a نصف المحور الأكبر)</li>
-            </ol>
-            
-            <h3>الطاقة في المدار</h3>
-            <div class="equation">الطاقة الكلية: E = -GMm/(2r) (للمدار الدائري)</div>
-            <div class="equation">سرعة الهروب: vesc = √(2GM/R)</div>
-            
-            <div class="example">
-                <p><strong>مثال:</strong> حساب القوة الجاذبية على ثلاث كرات بلياردو كتلة كل منها 0.3kg مرتبة في مثلث قائم بأضلاع 0.3m، 0.4m، 0.5m</p>
-            </div>
-        </section>
-
-        <section id="part2ch3" class="section">
-            <h2>الفصل 3: تدفق السوائل (ص 108-125)</h2>
-            <p>دراسة حركة السوائل والغازات وخصائصها الفيزيائية.</p>
-            
-            <h3>خصائص السوائل الأساسية</h3>
-            <p><strong>الكثافة:</strong> ρ = m/V</p>
-            <p><strong>الجاذبية النوعية:</strong> نسبة كثافة المادة إلى كثافة الماء</p>
-            
-            <h3>الضغط في السوائل</h3>
-            <div class="equation">P = F/A (الضغط الأساسي)</div>
-            <div class="equation">P = P₀ + ρgh (الضغط مع العمق)</div>
-            
-            <h3>قانون باسكال</h3>
-            <p>الضغط المطبق على سائل محصور ينتقل بالتساوي في جميع الاتجاهات</p>
-            <div class="equation">F₂/F₁ = A₂/A₁ (الميزة الميكانيكية)</div>
-            
-            <h3>مبدأ أرشيميدس</h3>
-            <p>قوة الطفو تساوي وزن السائل المزاح</p>
-            <div class="equation">Fb = ρL g V (حيث V الحجم المغمور)</div>
-            <div class="equation">شرط الطفو: ρs < ρL</div>
-            
-            <h3>التوتر السطحي</h3>
-            <div class="equation">γ = F/d (N/m)</div>
-            <div class="equation">فرق الضغط للفقاعة: ΔP = 4γ/R</div>
-            <div class="equation">فرق الضغط للقطرة: ΔP = 2γ/R</div>
-            
-            <h3>الخاصية الشعرية</h3>
-            <div class="equation">h = 2γ cosθ/(ρgr)</div>
-            
-            <h3>ديناميكا السوائل</h3>
-            <p><strong>معادلة الاستمرارية:</strong></p>
-            <div class="equation">A₁v₁ = A₂v₂</div>
-            
-            <p><strong>معادلة برنولي:</strong></p>
-            <div class="equation">P + ρgy + ½ρv² = const</div>
-            
-            <h3>اللزوجة</h3>
-            <div class="equation">قانون نيوتن للزوجة: F = ηAv/d</div>
-            <div class="equation">قانون بوازوي: ΔV/Δt = πR⁴(P₁-P₂)/(8ηL)</div>
-            <div class="equation">قانون ستوكس: F = 6πηrv</div>
-            <div class="equation">عدد رينولدز: RN = ρvd/η</div>
-        </section>
-
-        <section id="part2ch4" class="section">
-            <h2>الفصل 4: المرونة (ص 126-130)</h2>
-            <p>دراسة قدرة المواد على العودة لشكلها الأصلي بعد إزالة القوى المؤثرة عليها.</p>
-            
-            <h3>أنواع التشوه</h3>
-            <ul>
-                <li><strong>التشوه الخطي:</strong> تمدد أو انضغاط</li>
-                <li><strong>تشوه القص:</strong> انزلاق الطبقات</li>
-                <li><strong>التشوه الحجمي:</strong> تغيير الحجم</li>
-            </ul>
-            
-            <h3>معاملات المرونة</h3>
-            <div class="equation">معامل يانغ: Y = (F/A)/(ΔL/L)</div>
-            <div class="equation">معامل الصلابة: G = (F/A)/θ</div>
-            <div class="equation">المعامل الحجمي: B = -ΔP/(ΔV/V)</div>
-            
-            <h3>نسبة بواسون</h3>
-            <div class="equation">σ = -(ΔD/D)/(ΔL/L)</div>
-            
-            <h3>منحنى الإجهاد-الانفعال</h3>
-            <ul>
-                <li><strong>المنطقة المرنة:</strong> التشوه قابل للعكس</li>
-                <li><strong>المنطقة البلاستيكية:</strong> التشوه دائم</li>
-                <li><strong>نقطة الكسر:</strong> فشل المادة</li>
-            </ul>
-        </section>
-
-        <section id="part2ch5" class="section">
-            <h2>الفصل 5: دوران جسم صلب حول محور ثابت (ص 131-135)</h2>
-            <p>دراسة الحركة الدورانية للأجسام الصلبة وخصائصها الديناميكية.</p>
-            
-            <h3>الكميات الزاوية</h3>
-            <ul>
-                <li><strong>الموضع الزاوي:</strong> θ (راديان)</li>
-                <li><strong>السرعة الزاوية:</strong> ω = dθ/dt (راديان/ثانية)</li>
-                <li><strong>التسارع الزاوي:</strong> α = dω/dt (راديان/ثانية²)</li>
-            </ul>
-            
-            <h3>العلاقة بين الكميات الخطية والزاوية</h3>
-            <div class="equation">s = rθ، v = rω، a = rα</div>
-            
-            <h3>عزم القصور الذاتي</h3>
-            <div class="equation">I = Σmᵢrᵢ² = ∫r² dm</div>
-            <div class="equation">نظرية المحاور المتوازية: I₀ = ICM + MD²</div>
-            
-            <h3>عزوم القصور لأشكال مختلفة</h3>
-            <table>
-                <tr><th>الشكل</th><th>عزم القصور الذاتي</th></tr>
-                <tr><td>قضيب (حول المركز)</td><td>I = (1/12)ML²</td></tr>
-                <tr><td>قضيب (حول النهاية)</td><td>I = (1/3)ML²</td></tr>
-                <tr><td>حلقة</td><td>I = MR²</td></tr>
-                <tr><td>قرص صلب</td><td>I = (1/2)MR²</td></tr>
-                <tr><td>كرة صلبة</td><td>I = (2/5)MR²</td></tr>
-                <tr><td>قشرة كروية</td><td>I = (2/3)MR²</td></tr>
-            </table>
-            
-            <h3>الطاقة الحركية الدورانية</h3>
-            <div class="equation">K = ½Iω²</div>
-        </section>
-
-        <section id="part2ch6" class="section">
-            <h2>الفصل 6: الحركة التوافقية البسيطة (ص 136-140)</h2>
-            <p>دراسة الحركة الاهتزازية والدورية في الطبيعة.</p>
-            
-            <h3>تعريف الحركة التوافقية البسيطة</h3>
-            <p>حركة دورية تكون فيها القوة المؤثرة متناسبة مع الإزاحة ومعاكسة لها في الاتجاه.</p>
-            
-            <h3>حركة الزنبرك</h3>
-            <div class="equation">قانون هوك: Fs = -kx</div>
-            <div class="equation">معادلة الحركة: ax = -(k/m)x = -ω²x</div>
-            <p>حيث ω = √(k/m) هي التردد الزاوي</p>
-            
-            <h3>معادلات الحركة</h3>
-            <div class="equation">x(t) = A cos(ωt + φ)</div>
-            <div class="equation">v(t) = -Aω sin(ωt + φ)</div>
-            <div class="equation">a(t) = -Aω² cos(ωt + φ)</div>
-            
-            <h3>الخصائص الزمنية</h3>
-            <div class="equation">الدورة: T = 2π/ω = 2π√(m/k)</div>
-            <div class="equation">التردد: f = 1/T = (1/2π)√(k/m)</div>
-            
-            <h3>الطاقة في الحركة التوافقية</h3>
-            <div class="equation">الطاقة الحركية: K = ½mv²</div>
-            <div class="equation">الطاقة الكامنة: U = ½kx²</div>
-            <div class="equation">الطاقة الكلية: E = ½kA²</div>
-            
-            <h3>البندول البسيط</h3>
-            <div class="equation">T = 2π√(L/g)</div>
-            
-            <h3>البندول الفيزيائي</h3>
-            <div class="equation">T = 2π√(I/(mgd))</div>
-            
-            <h3>التخميد</h3>
-            <p>تأثير المقاومة على الحركة الاهتزازية</p>
-            <div class="equation">x(t) = Ae^(-bt/2m) cos(ωt + φ)</div>
-            <div class="equation">ω = √(k/m - (b/2m)²)</div>
-            
-            <div class="example">
-                <p><strong>مثال 1:</strong> سيارة كتلتها 1300kg + 160kg راكب، بها 4 زنبركات قوة كل منها 20000N/m: التردد f = 1.79Hz</p>
-                <p><strong>مثال 2:</strong> عربة كتلتها 0.5kg متصلة بزنبرك k = 20N/m، السعة A = 3cm:</p>
-                <p>• الطاقة الكلية E = 0.009J</p>
-                <p>• السرعة القصوى vmax = 0.19m/s</p>
-                <p>• السرعة عند x = 2cm: v = 0.141m/s</p>
-            </div>
-        </section>
-
-        <footer class="footer">
-        </footer>
-    </div>
-
-    <script>
-        // Add smooth scrolling and interactive effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate sections on scroll
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(30px)';
-                section.style.transition = 'all 0.6s ease';
-                observer.observe(section);
-            });
-
-            // Add click effect to equations
-            document.querySelectorAll('.equation').forEach(eq => {
-                eq.addEventListener('click', function() {
-                    this.style.transform = 'scale(1.02)';
-                    setTimeout(() => {
-                        this.style.transform = 'scale(1)';
-                    }, 200);
-                });
-            });
-
-            // Add hover effect to examples
-            document.querySelectorAll('.example').forEach(ex => {
-                ex.addEventListener('mouseenter', function() {
-                    this.style.borderLeft = '4px solid var(--accent-color)';
-                });
-                ex.addEventListener('mouseleave', function() {
-                    this.style.borderLeft = 'none';
-                });
-            });
-        });
-    </script>
-</body>
-</html>
